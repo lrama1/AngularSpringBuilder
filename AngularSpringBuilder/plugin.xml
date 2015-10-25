@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="EclipsePluginTemplate.category2"
+            name="MyCustomProjects">
+      </category>
+      <wizard
+            category="EclipsePluginTemplate.category2"
+            class="eclipseplugintemplate.wizard.AngularBuilderWizard"
+            id="EclipsePluginTemplate.wizard2"
+            name="AngularBuilder"
+            project="true">
+      </wizard>
+   </extension>
+
+</plugin>
