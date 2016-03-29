@@ -17,7 +17,7 @@ public class WizardPage03 extends WizardPage {
 
 	@Override
 	public void createControl(Composite parent) {
-		Composite container = new Page03Panel(parent, SWT.DOUBLE_BUFFERED);		
+		Composite container = new Page03Panel(parent, this ,SWT.DOUBLE_BUFFERED);		
 
 
 		container.setLayout(null);
@@ -27,7 +27,7 @@ public class WizardPage03 extends WizardPage {
 		//setErrorMessage("Please fill blahh");
 		
 		//set to false to disallow the Next button, otherwise set to true to enable Next
-		setPageComplete(true);
+		setPageComplete(false);
 
 	}
 

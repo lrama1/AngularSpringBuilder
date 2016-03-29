@@ -15,5 +15,28 @@
             project="true">
       </wizard>
    </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+         <objectContribution
+            objectClass="org.eclipse.core.resources.IProject"
+            id="AngularBuilder.contribution1">
+            
+            <menu
+               label="AngularBuilder"
+               path="additions"
+               id="AngularBuilder.menu1">
+            	<separator name="group1"> </separator>
+            	<separator name="group2"> </separator>
+         	</menu>
+         	<action
+               label="Add New Model.."
+               class="eclipseplugintemplate.wizard.action.AddNewModelAction"
+               menubarPath="AngularBuilder.menu1/group1"
+               enablesFor="1"
+               id="Oleng2.newAction">
+            </action>
+         
+        </objectContribution>    
+   </extension>
 
 </plugin>

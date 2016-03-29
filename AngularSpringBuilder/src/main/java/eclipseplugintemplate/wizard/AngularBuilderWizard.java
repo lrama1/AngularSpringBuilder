@@ -1,5 +1,8 @@
 package eclipseplugintemplate.wizard;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;
 import org.eclipse.ui.INewWizard;
@@ -11,6 +14,7 @@ import eclipseplugintemplate.wizard.page.WizardPage03;
 import eclipseplugintemplate.wizard.page.WizardPage04;
 import eclipseplugintemplate.wizard.page.WizardPage05;
 import eclipseplugintemplate.wizard.page.WizardPage06;
+import eclipseplugintemplate.wizard.page.panel.Page02Panel;
 
 public class AngularBuilderWizard extends Wizard implements INewWizard {
 	
@@ -46,6 +50,10 @@ public class AngularBuilderWizard extends Wizard implements INewWizard {
 	@Override
 	public boolean performFinish() {
 		// TODO Auto-generated method stub
+		Map<String, String> mapOfValues = new LinkedHashMap<String, String>();
+		Page02Panel wizardPage02Panel =  (Page02Panel)page02.getWizardPanel();
+		
+		
 		return false;
 	}
 

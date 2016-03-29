@@ -1,6 +1,5 @@
 package eclipseplugintemplate.wizard.page;
 
-import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.wizard.WizardPage;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
@@ -8,6 +7,8 @@ import org.eclipse.swt.widgets.Composite;
 import eclipseplugintemplate.wizard.page.panel.Page02Panel;
 
 public class WizardPage02 extends WizardPage {
+	
+	private Composite wizardPanel;
 
 	public WizardPage02(String pageName) {
 		super(pageName);
@@ -17,11 +18,11 @@ public class WizardPage02 extends WizardPage {
 
 	@Override
 	public void createControl(Composite parent) {
-		Composite container = new Page02Panel(parent, SWT.DOUBLE_BUFFERED);		
+		wizardPanel = new Page02Panel(parent, this,SWT.DOUBLE_BUFFERED);		
 
 
-		container.setLayout(null);
-		setControl(container);
+		wizardPanel.setLayout(null);
+		setControl(wizardPanel);
 		
 		//if not blank, it displays the error message on the top portion of the Wizard Page
 		//setErrorMessage("Please fill blahh");
@@ -29,6 +30,10 @@ public class WizardPage02 extends WizardPage {
 		//set to false to disallow the Next button, otherwise set to true to enable Next
 		setPageComplete(true);
 
+	}
+	
+	public Composite getWizardPanel(){
+		return this.wizardPanel;
 	}
 
 }
